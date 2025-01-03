@@ -7,31 +7,18 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import com.example.authlistapp.network.RetrofitInstance
 
 class FetchDataWorker(context: Context, workerParams: WorkerParameters) :
     Worker(context, workerParams) {
 
     override fun doWork(): Result {
-        val response = fetchDataFromMockApi()
+        val response = RetrofitInstance.fetchDataFromMockApi()
         if (response != null) {
             showNotification("Fetch Completed", "Data: $response")
             return Result.success()
         }
         return Result.retry()
-    }
-
-    private fun fetchDataFromMockApi(): String? {
-        val client = OkHttpClient()
-        val request = Request.Builder()
-            .url("https://jsonplaceholder.typicode.com/posts/1")
-            .build()
-
-        return try {
-            val response = client.newCall(request).execute()
-            response.body?.string()
-        } catch (e: Exception) {
-            null
-        }
     }
 
     private fun showNotification(title: String, message: String) {

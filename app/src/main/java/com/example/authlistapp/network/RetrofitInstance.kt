@@ -6,6 +6,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
+import okhttp3.Request
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -32,6 +33,20 @@ object RetrofitInstance {
             .build()
         REST_CLIENT = retrofit.create(ApiService::class.java)
         return REST_CLIENT
+    }
+
+    fun fetchDataFromMockApi(): String? {
+        val client = OkHttpClient()
+        val request = Request.Builder()
+            .url("https://jsonplaceholder.typicode.com/posts/1")
+            .build()
+
+        return try {
+            val response = client.newCall(request).execute()
+            response.body?.string()
+        } catch (e: Exception) {
+            null
+        }
     }
 
 }
