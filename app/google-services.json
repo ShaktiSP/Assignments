@@ -12,7 +12,12 @@
           "package_name": "com.example.authlistapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "709198319181-n0aim4csjbdolk14nmj9qeeiufmuaf43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyA-9lTJdFDV_kk33wG9nViRxtCuq2eIQN0"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "709198319181-n0aim4csjbdolk14nmj9qeeiufmuaf43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

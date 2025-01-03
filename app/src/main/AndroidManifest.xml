@@ -25,6 +25,10 @@
             </intent-filter>
         </receiver>
 
+        <meta-data
+            android:name="com.google.android.gms.appstate.APP_ID"
+            android:value="@string/google_app_id" />
+
         <activity
             android:name=".views.WorkManagerActivity"
             android:exported="false" />

@@ -49,7 +49,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
     implementation(libs.firebase.auth)
+    implementation ("com.google.android.gms:play-services-auth:20.7.0")
+
     implementation(libs.junit.junit)
     testImplementation(libs.junit)
     testImplementation(libs.mockk)
