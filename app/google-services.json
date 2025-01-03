@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "709198319181",
+    "project_id": "authlist-app",
+    "storage_bucket": "authlist-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:709198319181:android:7415b203a19bfb81839604",
+        "android_client_info": {
+          "package_name": "com.example.authlistapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-9lTJdFDV_kk33wG9nViRxtCuq2eIQN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

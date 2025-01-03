@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Assignment</string>
+    <string name="error">Error</string>
+    <string name="password_validation">
+      Password must be 6 character long which contain at least 1 upper case, 1 lower case, 1 digit and 1 special character
+    </string>
+</resources>
