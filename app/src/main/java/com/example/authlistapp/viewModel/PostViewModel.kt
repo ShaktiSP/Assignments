@@ -53,10 +53,5 @@ class PostViewModel (val application: Application, var authRepository: PostRepos
             }
         }
     }
-
-    private fun isOnline(): Boolean {
-        return true
-    }
-
 }
 

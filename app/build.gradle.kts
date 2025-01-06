@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
     kotlin("kapt")
+    id ("dagger.hilt.android.plugin")
 }
 
 android {
@@ -49,31 +50,33 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 
+    //Firebase Auth
     implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
     implementation(libs.firebase.auth)
     implementation ("com.google.android.gms:play-services-auth:20.7.0")
 
-    implementation(libs.junit.junit)
-    testImplementation(libs.junit)
-    testImplementation(libs.mockk)
-    testImplementation(libs.kotlinx.coroutines.test)
-    androidTestImplementation(libs.androidx.espresso.core)
-
+    //MVVM
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.paging.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+
+    //RoomDB
     implementation(libs.androidx.room.runtime)
     kapt(libs.androidx.room.compiler)
 
-    implementation("com.google.dagger:hilt-android:2.46.1")
-    kapt("com.google.dagger:hilt-compiler:2.46.1")
+    //Dagger-Hilt
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-compiler:2.51.1")
 
+    //okHttp
     implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
-
     implementation ("androidx.work:work-runtime-ktx:2.8.1")
     implementation ("com.squareup.okhttp3:okhttp:4.10.0")
 
